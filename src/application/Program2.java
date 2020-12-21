@@ -20,9 +20,9 @@ public class Program2 {
 		System.out.println(department);
 		
 		System.out.println("\n=== TEST 2: department insertion ===");
-		Department newDep = new Department(45, "capilar");
+		Department newDep = new Department(null, "capilar");
 		departmentDao.insert(newDep);
-		System.out.println("Inserted! New Id = " + newDep);
+		System.out.println("Inserted! New Id = " + newDep.getId());
 		
 		System.out.println("\n=== TEST 3: department update ===");
 		department = departmentDao.findById(1);
