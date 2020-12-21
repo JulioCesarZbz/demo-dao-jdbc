@@ -19,13 +19,16 @@ public class Program2 {
 		Department department = departmentDao.findById(1);
 		System.out.println(department);
 		
-		System.out.println("\n=== TEST 1: department insertion ===");
-		Department newDep = new Department(18, "capilar");
+		System.out.println("\n=== TEST 2: department insertion ===");
+		Department newDep = new Department(25, "capilar");
 		departmentDao.insert(newDep);
 		System.out.println("Inserted! New Id = " + newDep);
 		
-		
-		
+		System.out.println("\n=== TEST 3: department update ===");
+		department = departmentDao.findById(1);
+		department.setName("Fragances");
+		departmentDao.update(department);
+		System.out.println("Update Completed");
 		
 		
 		
